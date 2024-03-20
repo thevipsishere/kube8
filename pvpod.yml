@@ -12,11 +12,11 @@ spec:
         claimName: my-pvc
   containers:
     - name: task-pv-container
-      image: nginx
+      image: httpd
       ports:
         - containerPort: 80
           name: "http-server"
       volumeMounts:
-        - mountPath: "/usr/share/nginx/html"
+        - mountPath: "/var/www/html"
           name: my-pvc
 ...
